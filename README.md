@@ -1,106 +1,65 @@
 # ContribHub
 
-A beautiful GitHub-like web application for searching and exploring repositories and organizations with detailed information about tech stacks, issues, and labels.
+> 🚀 Find open source projects to contribute to, sorted by issues and tech stack
 
-## Features
+**[Live Demo](http://gitcontributor.netlify.app)** | **[Report Bug](https://github.com/Omzee15/ContribHub/issues)**
 
-- 🔍 **Search Repositories & Organizations** - Search GitHub's vast repository database
-- 🎨 **GitHub-like UI** - Authentic GitHub dark theme and user interface
-- 🛠️ **Tech Stack Display** - View the programming languages and their usage percentages
-- 📊 **Issue Tracking** - See the number of open issues for each repository
-- 🏷️ **Label Display** - View popular issue labels used in repositories
-- 🎯 **Advanced Filtering** - Filter by repository type, organization, or programming language
-- ⭐ **Repository Stats** - Stars, forks, and issue counts at a glance
-- 📱 **Responsive Design** - Works seamlessly on desktop and mobile devices
+## 🎯 Problem Statement
 
-## Tech Stack
+Finding the right open source project to contribute to can be overwhelming. Developers often struggle to:
+- **Discover repositories** with active issues that match their skills
+- **Filter projects** by programming languages they're comfortable with
+- **Identify beginner-friendly issues** through labels like "good first issue" or "help wanted"
+- **See at a glance** which projects need the most help
 
-- **React 18** - Modern React with hooks
-- **Vite** - Lightning-fast build tool
-- **Axios** - HTTP client for GitHub API requests
-- **GitHub REST API** - Real-time repository and organization data
+**ContribHub solves this** by providing a streamlined interface to search, filter, and sort GitHub repositories based on open issues, tech stack, and issue labels—making it easy to find projects that need your contributions.
 
-## Installation
+## ✨ Features
 
-1. **Clone the repository**
-   ```bash
-   git clone <your-repo-url>
-   cd git_issue_solver
-   ```
+- � Search GitHub repositories and organizations
+- � Sort by most issues or most stars
+- 🎯 Filter by programming languages and issue labels
+- � View tech stack, stars, forks, and open issues
+- 🎨 Clean GitHub-inspired dark theme
+- 📱 Fully responsive design
 
-2. **Install dependencies**
-   ```bash
-   npm install
-   ```
+## 🚀 Quick Start
 
-3. **Start the development server**
-   ```bash
-   npm run dev
-   ```
+```bash
+# Clone the repository
+git clone https://github.com/Omzee15/ContribHub.git
+cd ContribHub
 
-4. **Open your browser**
-   - Navigate to `http://localhost:5173`
+# Install dependencies
+npm install
 
-## Usage
-
-1. **Search**: Enter keywords in the search bar to find repositories or organizations
-2. **Filter Type**: Use the sidebar to switch between Repositories and Organizations
-3. **Filter Language**: Select a programming language to narrow down results
-4. **View Details**: Each result shows:
-   - Repository name and description
-   - Tech stack with language percentages
-   - Star count, fork count, and issue count
-   - Popular issue labels
-   - Primary programming language
-
-## API Rate Limits
-
-This app uses the GitHub REST API without authentication, which has a rate limit of 60 requests per hour. For higher limits:
-
-1. Create a GitHub Personal Access Token
-2. Add it to your requests (see GitHub API documentation)
-3. This will increase your limit to 5,000 requests per hour
-
-## Project Structure
-
-```
-git_issue_solver/
-├── src/
-│   ├── components/
-│   │   ├── SearchBar.jsx          # Search input component
-│   │   ├── SearchBar.css
-│   │   ├── FilterSidebar.jsx      # Filter controls
-│   │   ├── FilterSidebar.css
-│   │   ├── ResultsList.jsx        # Results container
-│   │   ├── ResultsList.css
-│   │   ├── RepositoryCard.jsx     # Individual result card
-│   │   └── RepositoryCard.css
-│   ├── App.jsx                     # Main app component
-│   ├── App.css
-│   ├── main.jsx                    # Entry point
-│   └── index.css                   # Global styles
-├── index.html
-├── vite.config.js
-└── package.json
+# Start development server
+npm run dev
 ```
 
-## Available Scripts
+Open [http://localhost:5173](http://localhost:5173) in your browser.
 
-- `npm run dev` - Start development server
-- `npm run build` - Build for production
-- `npm run preview` - Preview production build
+## 🛠️ Tech Stack
 
-## Browser Support
+- React 18 + Vite
+- GitHub REST API
+- Axios
 
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
+## 📝 API Rate Limits
 
-## Contributing
+Without authentication: **60 requests/hour**  
+With GitHub token: **5,000 requests/hour**
 
-Feel free to submit issues and enhancement requests!
+To add a token, create a `.env` file:
+```env
+VITE_GITHUB_TOKEN=your_github_token_here
+```
 
-## License
+## 🤝 Contributing
 
-MIT License - feel free to use this project for learning and development.
+Contributions are welcome! Feel free to open issues and pull requests.
+
+## 📄 License
+
+MIT License
+
