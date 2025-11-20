@@ -126,6 +126,23 @@ function RepoDetailsPage() {
     return option ? option.label : 'Recently Created'
   }
 
+  const handleOpenInVSCode = () => {
+    if (!repository) return
+    
+    // Use VS Code's URI scheme to clone the repository
+    // This requires VS Code to be installed with the Git extension
+    const cloneUrl = repository.clone_url
+    const vscodeUrl = `vscode://vscode.git/clone?url=${encodeURIComponent(cloneUrl)}`
+    
+    // Open the VS Code URL
+    window.location.href = vscodeUrl
+    
+    // Show a helpful message
+    setTimeout(() => {
+      alert('Opening in VS Code...\n\nNote: VS Code must be installed on your system.\nIf VS Code doesn\'t open, you can manually clone:\n' + cloneUrl)
+    }, 500)
+  }
+
   if (loading) {
     return (
       <div className="repo-details-page">
@@ -181,6 +198,16 @@ function RepoDetailsPage() {
           </div>
 
           <div className="repo-header-actions">
+            <button 
+              onClick={handleOpenInVSCode}
+              className="vscode-button"
+              title="Clone and open in VS Code"
+            >
+              <svg height="16" viewBox="0 0 16 16" width="16" fill="currentColor">
+                <path d="M11.28 0L5.955 5.22 2.456 2.487 1.145 3.3v9.4l1.31.813 3.5-2.733L11.28 16l3.333-1.667V1.667L11.28 0zm.555 11.867l-4.803-3.734 4.803-3.733v7.467z"/>
+              </svg>
+              Open in VS Code
+            </button>
             <a 
               href={repository.html_url} 
               target="_blank" 

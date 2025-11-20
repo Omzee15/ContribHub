@@ -56,6 +56,9 @@
 
 .repo-header-actions {
   margin-bottom: 20px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
 }
 
 .github-button {
@@ -80,6 +83,31 @@
 }
 
 .github-button svg {
+  flex-shrink: 0;
+}
+
+.vscode-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background-color: #0078d4;
+  color: white;
+  border: 1px solid rgba(240, 246, 252, 0.1);
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.vscode-button:hover {
+  background-color: #005a9e;
+  box-shadow: 0 2px 8px rgba(0, 120, 212, 0.3);
+  transform: translateY(-1px);
+}
+
+.vscode-button svg {
   flex-shrink: 0;
 }
 
