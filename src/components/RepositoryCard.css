@@ -3,7 +3,17 @@
   border: 1px solid var(--color-border-default);
   border-radius: var(--radius-md);
   padding: var(--spacing-md);
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.repo-card.clickable {
+  cursor: pointer;
+}
+
+.repo-card.clickable:hover {
+  border-color: var(--color-accent-fg);
+  box-shadow: 0 4px 12px rgba(88, 166, 255, 0.2);
+  transform: translateY(-2px);
 }
 
 .repo-card:hover {
@@ -16,6 +26,32 @@
   align-items: center;
   gap: var(--spacing-sm);
   margin-bottom: var(--spacing-sm);
+}
+
+.repo-name-section {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  width: 100%;
+}
+
+.repo-name-text {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--color-accent-fg);
+  flex: 1;
+}
+
+.external-link {
+  display: inline-flex;
+  align-items: center;
+  color: var(--color-fg-muted);
+  transition: color 0.2s ease;
+  padding: 4px;
+}
+
+.external-link:hover {
+  color: var(--color-accent-fg);
 }
 
 .org-avatar {
@@ -91,6 +127,35 @@
 
 .stat svg {
   color: var(--color-fg-subtle);
+}
+
+.repo-actions {
+  margin-bottom: var(--spacing-md);
+}
+
+.github-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background-color: #238636;
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  border: 1px solid rgba(240, 246, 252, 0.1);
+}
+
+.github-button:hover {
+  background-color: #2ea043;
+  box-shadow: 0 2px 8px rgba(35, 134, 54, 0.3);
+  transform: translateY(-1px);
+}
+
+.github-button svg {
+  flex-shrink: 0;
 }
 
 .issue-categories {

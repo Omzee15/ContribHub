@@ -1,71 +1,7 @@
+/* Global app styles */
 .app {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
 
-.app-header {
-  background-color: var(--color-canvas-subtle);
-  border-bottom: 1px solid var(--color-border-default);
-  padding: var(--spacing-md) var(--spacing-lg);
-  position: sticky;
-  top: 0;
-  z-index: 100;
-}
-
-.header-content {
-  max-width: 100%;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: var(--spacing-md);
-}
-
-.logo {
-  display: flex;
-  align-items: center;
-  gap: var(--spacing-sm);
-  color: var(--color-fg-default);
-  font-size: 16px;
-  font-weight: 600;
-  white-space: nowrap;
-}
-
-.logo svg {
-  flex-shrink: 0;
-}
-
-.search-and-sort {
-  display: flex;
-  align-items: center;
-  gap: var(--spacing-md);
-  width: 100%;
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-.main-content {
-  display: flex;
-  max-width: 100%;
-  width: 100%;
-  margin: 0 auto;
-  gap: 0;
-  flex: 1;
-  min-height: calc(100vh - 100px);
-}
-
-@media (max-width: 768px) {
-  .main-content {
-    flex-direction: column;
-  }
-  
-  .logo {
-    margin-bottom: var(--spacing-sm);
-  }
-  
-  .search-and-sort {
-    flex-direction: column;
-    align-items: stretch;
-  }
-}

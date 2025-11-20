@@ -2,7 +2,6 @@
   display: flex;
   gap: var(--spacing-sm);
   flex: 1;
-  max-width: 800px;
 }
 
 .search-input {
@@ -38,10 +37,4 @@
 
 .search-button:hover {
   background-color: var(--color-btn-primary-hover-bg);
-}
-
-@media (max-width: 768px) {
-  .search-bar {
-    max-width: 100%;
-  }
 }
